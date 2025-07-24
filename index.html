@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Sorry 💔</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Password Screen -->
+  <div id="password-screen">
+    <div class="password-card">
+    <div class="gif-circle">
+      <img src="your-gif.gif" alt="Cute animation" />
+    </div>
+      <h2>💌 Just For You</h2>
+      <p>This page is only for someone really special...</p>
+      <input type="password" id="password" placeholder="Enter the secret password" />
+      <button onclick="checkPassword()">Unlock 🔓</button>
+      <p id="error-msg" style="color: red; display: none;">Did you forget the password I gave you? <br> Try again 🥺</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" style="display: none;">
+    <h1>I'm Really Sorry 🥹💖</h1>
+
+    <div class="photo-frame">
+      <video class="bubu-video" autoplay loop muted playsinline>
+        <source src="bubududu.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="caption">I'm Sorry My Love 🧸💌</p>
+    </div>
+
+    <p class="animated-text">I messed up, and I want to make it right.</p>
+    <div class="emojis">🥺💌🐾🌸🫶</div>
+    <p class="animated-text">Please forgive me.</p>
+
+    <button id="forgive-btn">Forgive Me? 🥺</button>
+    <p id="response-msg" style="font-size: 1.2em; margin-top: 20px;"></p>
+  </div>
+
+  <!-- 💖 Puzzle Section -->
+  <div id="puzzle-section" class="hidden">
+    <h2>🧩 A Little Surprise</h2>
+    <p>Can you help me complete this?</p>
+    <button onclick="startPuzzle()">Start the Puzzle 💕</button>
+
+    <!-- 🧩 Puzzle Container -->
+    <div id="puzzle-container" class="hidden">
+      <h3>Complete the Puzzle 💞</h3>
+      <div class="puzzle-board">
+        <!-- Drop zones -->
+        <div class="drop-zone" id="target1"></div>
+        <div class="drop-zone" id="target2"></div>
+        <div class="drop-zone" id="target3"></div>
+        <div class="drop-zone" id="target4"></div>
+        <div class="drop-zone" id="target5"></div>
+        <div class="drop-zone" id="target6"></div>
+        <div class="drop-zone" id="target7"></div>
+        <div class="drop-zone" id="target8"></div>
+        <div class="drop-zone" id="target9"></div>
+      </div>
+
+      <!-- Puzzle pieces (outside grid) -->
+      <div class="puzzle-pieces">
+        <img src="puzzle/puzzle_piece_0_0.jpg" class="puzzle-piece" id="piece1" />
+        <img src="puzzle/puzzle_piece_0_1.jpg" class="puzzle-piece" id="piece2" />
+        <img src="puzzle/puzzle_piece_0_2.jpg" class="puzzle-piece" id="piece3" />
+        <img src="puzzle/puzzle_piece_1_0.jpg" class="puzzle-piece" id="piece4" />
+        <img src="puzzle/puzzle_piece_1_1.jpg" class="puzzle-piece" id="piece5" />
+        <img src="puzzle/puzzle_piece_1_2.jpg" class="puzzle-piece" id="piece6" />
+        <img src="puzzle/puzzle_piece_2_0.jpg" class="puzzle-piece" id="piece7" />
+        <img src="puzzle/puzzle_piece_2_1.jpg" class="puzzle-piece" id="piece8" />
+        <img src="puzzle/puzzle_piece_2_2.jpg" class="puzzle-piece" id="piece9" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ✉️ Envelope Container -->
+  <div id="envelope-container" class="hidden">
+    <div class="envelope">
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-letter">💌</div>
+    </div>
+  </div>
+
+  <!-- 📜 Vintage Letter Modal -->
+  <div id="letter-modal" class="modal hidden">
+    <div class="modal-content scroll-letter">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h3>💌 My Dearest You</h3>
+      <p id="typed-letter"></p>
+      <div class="forgive-options hidden" id="forgive-options">
+        <p>Will you forgive me?</p>
+        <button class="yes-btn" onclick="handleForgive('yes')">Yes 💖</button>
+        <button class="no-btn" onclick="handleForgive('no')">Not yet 😢</button>
+      </div>
+      <div class="response-message hidden" id="response-message"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
